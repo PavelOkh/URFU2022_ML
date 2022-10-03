@@ -1,3 +1,6 @@
+"""Использован шаблои из модуля1 и добавлена оптимизация поиска путем изменения диапозона
+в зависимости от того, больше или мешье неверные варианты относительно загаданного числа"""
+
 import numpy as np
 def random_predict(number:int=1) -> int:
     """Рандомно угадываем число
@@ -13,7 +16,7 @@ def random_predict(number:int=1) -> int:
     min_lim=1 #начальный нижний предел поиска
     max_lim=101 #начальный верхний предел поиска
     while True:
-        count += 1
+        count += 1 
         predict_number = np.random.randint(min_lim, max_lim) # предполагаемое число
         if number == predict_number:
             break # выход из цикла, если угадали
