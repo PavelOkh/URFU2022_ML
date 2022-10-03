@@ -18,10 +18,11 @@ def random_predict(number:int=1) -> int:
         if number == predict_number:
             break # выход из цикла, если угадали
         
-        elif number < predict_number: #"""Для оптимищзации поиска добавляем два условия elif
+        elif number < predict_number: #Для оптимищзации поиска добавляем два условия elif
             max_lim = predict_number+1 #уменьшаем верхний предел поиска
         elif number > predict_number:   
             min_lim = predict_number #увеличиваем нижний предел поиска
+            
     return(count)
 
 print(f'Количество попыток: {random_predict()}')
